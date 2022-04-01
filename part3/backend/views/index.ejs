@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div>
+      <ul>
+        <li><button onclick="get()">get</button></li>
+        <li><button onclick="post()">post</button></li>
+        <li><button onclick="put()">put</button></li>
+        <li><button onclick="del()">delete</button></li>
+        <li>
+          <form
+            id="uploadForm"
+            enctype="multipart/form-data"
+            action="/api/upload"
+            method="post"
+          >
+            <input type="text" name="name" value="text-value"/><br />
+            <input type="file" name="userFile" multiple />
+            <input type="submit" value="Upload File" name="submit" />
+          </form>
+        </li>
+      </ul>
+      <p id="result"></p>
+    </div>
+    <script src="/js/client.js"></script>
+  </body>
+</html>
